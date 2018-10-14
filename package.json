@@ -37,9 +37,9 @@
   },
   "scripts": {
     "setup": "npm install",
-    "test-only": "jest",
+    "test-only": "jest src/",
     "pretest": "npm run build",
-    "test": "jest",
+    "test": "jest src/",
     "clean": "shx rm -rf node_modules/ dist/ docs/",
     "start": "npm run build:live",
     "build": "tsc -p .",

@@ -57,7 +57,7 @@ module.exports = {
     // A set of global variables that need to be available in all test environments
     globals: {
         "ts-jest": {
-            "tsConfigFile": "tsconfig.json"
+            tsConfig: 'tsconfig.json',
         }
     },
 
@@ -164,7 +164,7 @@ module.exports = {
     transform: {
         "^.+\\.(ts|tsx)$": "ts-jest"
     },
-
+    preset: 'ts-jest'
     // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
     // transformIgnorePatterns: [
     //   "/node_modules/"
