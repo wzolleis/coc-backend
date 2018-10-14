@@ -19,7 +19,7 @@
   "devDependencies": {
     "@types/body-parser": "^1.16.8",
     "@types/dotenv": "^4.0.3",
-    "@types/errorhandler": "^0.0.32",
+    "@types/errorhandler": "0.0.32",
     "@types/express": "^4.11.1",
     "@types/express-session": "^1.15.8",
     "@types/jest": "^23.3.5",
@@ -37,7 +37,10 @@
   },
   "scripts": {
     "setup": "npm install",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test-only": "jest",
+    "pretest": "npm run build",
+    "test": "jest",
+    "clean": "shx rm -rf node_modules/ dist/ docs/",
     "start": "npm run build:live",
     "build": "tsc -p .",
     "build:live": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/server.ts"
